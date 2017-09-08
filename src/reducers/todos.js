@@ -17,7 +17,8 @@ const todos = (state = [], action) => {
       )
     default:
       return state
-  }
+  case 'REMOVE_TODO':
+    return state.filter(todo => todo.id !== action.id)
 }
-
+}
 export default todos
