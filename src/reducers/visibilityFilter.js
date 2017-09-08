@@ -1,7 +1,11 @@
-const visibilityFilter = (state = 'SHOW_ALL', action) => {
+const initialState = { filter: 'SHOW_ALL' }
+const visibilityFilter = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
-      return action.filter
+      return {
+        filter: action.filter,
+        query: action.query
+      }
     default:
       return state
   }

@@ -7,7 +7,13 @@ const TodoList = (props) => (
     {props.todos.map(todo =>
       <Todo
         key={todo.id}
+<<<<<<< HEAD
         {...todo}
+=======
+        completed={todo.completed}
+        text={todo.text}
+        // {...todo}
+>>>>>>> fbfde0cadbfe119f5e983b5006237476871e54d4
         onClick={() => props.onTodoClick(todo.id)}
         onRemove={() => props.onRemoveTodo(todo.id)}
       />
